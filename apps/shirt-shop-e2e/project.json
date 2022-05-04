@@ -1,0 +1,27 @@
+{
+  "sourceRoot": "apps/shirt-shop-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/shirt-shop-e2e/cypress.json",
+        "devServerTarget": "shirt-shop:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "shirt-shop:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/shirt-shop-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["shirt-shop"]
+}

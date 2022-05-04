@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "shirt-shop": "apps/shirt-shop",
+    "shirt-shop-e2e": "apps/shirt-shop-e2e"
+  }
+}
